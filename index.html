@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Papa’s Burguer</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <style>
+        .caixa{
+            background-color: aqua;
+        }
+    </style>
+
+    <div class="header bg-dark">
+        <p class="container text-light fs-2">Papa’s Burguer</p>
+    </div>
+    
+    <div class="tableTitle container">
+        <h1 class="text-center pt-5">Reservas da semana</h1>
+    </div>
+
+    <hr class="container">
+
+    <div class="tableContent container">
+        <table class="w-100 table table-dark table-striped-columns" >
+            <thead>
+                <tr class="fw-bold">
+                  <th>Cliente</th>
+                  <th>N° pessoas</th>
+                  <th>Data</th>
+                  <th>Horário</th>
+                </tr>
+            </thead>
+            
+            <tbody id="tabela-clientes">
+                <tr class="cliente" id="cliente">
+                  <td class="info-nome">Emil</td>
+                  <td class="info-numero">4</td>
+                  <td class="info-data">21/07/2023</td>
+                  <td class="info-horario">21:00</td>
+                </tr>
+                <tr class="cliente" id="cliente">
+                  <td class="info-nome">Paulo</td>
+                  <td class="info-numero">2</td>
+                  <td class="info-data">13/05/2023</td>
+                  <td class="info-horario">19:30</td>
+                </tr>
+                <tr class="cliente" id="cliente">
+                  <td class="info-nome">Raul</td>
+                  <td class="info-numero">6</td>
+                  <td class="info-data">29/08/2023</td>
+                  <td class="info-horario">18:00</td>
+                </tr>
+
+            </tbody>
+          </table>
+
+                <div class="row">
+                    <h3 class="col-md-3">Total de Clientes:</h3>
+                    <strong class="col-md-9 fs-4 qtdCliente">0</strong>
+                </div>
+         
+
+        <section class="FormTitle container">
+            <h2 class="text-center pt-5">Fazer uma reserva</h1>
+            <ul id="mensagens-erro" class="text-danger"></ul>
+            <hr class="container">
+            <form id="formAdd">
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" name="nome" required>
+                </div>
+                <div class="row mb-3">
+
+                    <div class="col-md-4">
+                        <label for="numero" class="form-label">N° pessoas</label>
+                        <input type="number" class="form-control" name="numero" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="date" class="form-label">Data</label>
+                        <input type="date" class="form-control" name="data" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="hora" class="form-label">Horário</label>
+                        <input type="time" id="appt"
+                        min="18:00" max="23:00" class="form-control" name="hora" required>
+                    </div>
+
+                </div>
+            
+                <button type="submit" class="btn btn-primary w-100" id="adicionarCliente">Enviar reserva</button>
+            </form>
+        </section>
+
+        <ul id="mensagens de erro">
+            <li></li>
+        </ul>
+    </div>
+
+    <script src="js/calcula.js"></script>
+    <script src="js/remove.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
